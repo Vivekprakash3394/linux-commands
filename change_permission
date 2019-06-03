@@ -1,0 +1,11 @@
+how to change permission of any file
+==>chmod 777 file_name
+where 	4=read
+	2=write
+	1=execute
+full permission read+write+execute =4+2+1=7
+------------------------------------------------------------------
+how to change group of any file
+==>chown :group_name file/directory_name
+------------------------------------------------------------------
+

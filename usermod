@@ -17,4 +17,23 @@ how to change primary group of the user
 how to add suplimentry group to the user
 usermod -G group_name user_name
 example: usermod -G production_team vps
+now you can check the info by using id vps
 -----------------------------------------------------------------
+
+[root@vps vps]# useradd vps1
+[root@vps vps]# cat /etc/passwd | grep vps1
+vps1:x:1002:1003::/home/vps1:/bin/bash
+[root@vps vps]# id vps1
+uid=1002(vps1) gid=1003(vps1) groups=1003(vps1)
+[root@vps vps]# groupadd IT
+[root@vps vps]# usermod -G IT vps1
+[root@vps vps]# id vps1
+uid=1002(vps1) gid=1003(vps1) groups=1003(vps1),1004(IT)
+
+-------------------------------------------------------------------------------------
+how to force to the user that he must change password
+
+chage -d 0 user_name
+example: chage -d 0 vps
+-------------------------------------------------------------------------------------
+
