@@ -8,4 +8,15 @@ full permission read+write+execute =4+2+1=7
 how to change group of any file
 ==>chown :group_name file/directory_name
 ------------------------------------------------------------------
+give special permission to the file
+
+==> chmod u+s filename
+in numeric form 
+==> chmod 4655 filename
+be carefull of the permission because you are giving the special permission to the user that may led to some major change
+
+remove the special permission from  the file
+==> chmod u-s filename
+==> chmod 655 filename
+
 

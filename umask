@@ -1,0 +1,24 @@
+how to change the default umask
+umask 	0002
+	||||
+	|||---other default permission
+	||----group permission
+	|-----owner default permission
+	------special permission
+
+where	0= all permission like read write and execute
+	1= read and write
+	2= read and execute
+	3= read only
+	4= write and execute
+	5= write only
+	6= execute only
+	7= no permission
+
+how to change the umask
+	umask	037 
+		|||
+		||----other have no permission
+		|-----group has read only permission
+		------owner has all the permission 
+
