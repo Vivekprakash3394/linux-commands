@@ -1,0 +1,63 @@
+user============> /etc/passwd
+group===========> /etc/group
+user_password===> /etc/shadow
+
+=====================================================================================================
+1. how to find the user id
+syntax: id user_name
+example: id vps
+=====================================================================================================
+2.how to check process that are running currently
+==>ps au
+=====================================================================================================
+3. how to check user
+==> cat /etc/passwd
+vps:x:1000:1000:vps:/home/vps:/bin/bash
+|   |   |    |   |   |            |
+|   |   |    |   |   |            ------user_shell_access
+|   |   |    |   |   |         
+|   |   |    |   |   |     
+|   |   |    |   |   -------------------user_home_directory
+|   |   |    |   -----------------------user_real_name
+|   |   |    ---------------------------user_group_id
+|   |   --------------------------------user_id
+|   ------------------------------------password_field(but password stored in the other file name /etc/shadow)
+----------------------------------------user_name
+=======================================================================================================
+4. how to find the group information
+==> cat /etc/group
+vps:x:1000:vps
+|   |   |   |
+|   |   |   ------user_that_member_of_this_group
+|   |   ----------group_id
+|   --------------group_password
+------------------group_name
+========================================================================================================
+5. how to add user
+syntax: useradd new_user_name
+example: useradd vivek
+========================================================================================================
+6. how to change user setting
+syntax:vim /etc/login.defs
+this command will not affect the existing user
+========================================================================================================
+7. how to set password to user for that you must be loged in as a root user
+syntax: passwd user_name
+example: passwd vivek (set your password for user vivek)
+========================================================================================================
+8. how to delete the existing user comletely
+syntax: userdel -r uer_name
+example: userdel -r vivek
+========================================================================================================
+9. how to create group
+syntax: groupadd group_name
+example: groupadd production_team (this will create the group named production_team)
+========================================================================================================
+10. how to create group with user defined group id
+syntax: groupadd -g group_id group_name
+example: groupadd -g 3000 production_team
+========================================================================================================
+11. how to delete the group 
+syntax: groupdel group_name
+example: groupdel production_team
+

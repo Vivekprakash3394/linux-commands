@@ -1,0 +1,42 @@
+1.how to create soft link/shortcut of any file
+syntax==>ln -s source destination
+example: ls -s /etc/hosts hosts_softlink
+-------------------------------------------------
+#################################################
+-------------------------------------------------
+2.how to create hard link of any file
+syntax==>ln source destination
+example: ln linkfile /root/home/
+-------------------------------------------------
+#################################################
+-------------------------------------------------
+3.how to find any file
+locate cmd is very fast because it used the local database
+syntax: locate file_name
+example: locate vivek.txt
+-------------------------------------------------
+#################################################
+-------------------------------------------------
+4.update the database
+syntax: updatedb
+-------------------------------------------------
+#################################################
+-------------------------------------------------
+5.how to find the file using find cmd 
+syntax: find location-name file_name
+exmaple:find /Desktop -name vps
+-------------------------------------------------
+#################################################
+-------------------------------------------------
+6.how to find a perticular find using by the specific user under any group
+syntax: find location -user user_name -group group_name
+example: find /home -user vps -group sales
+-------------------------------------------------
+#################################################
+-------------------------------------------------
+7. how to show contant of any file
+syntax: cat filename
+example: cat vivek.txt
+-------------------------------------------------
+#################################################
+-------------------------------------------------
