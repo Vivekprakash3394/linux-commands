@@ -1,0 +1,20 @@
+how to modify the user
+
+==>usermod -L vps (this command lock the vps user account)
+==>usermod -U vps (to unlock the user account)
+-----------------------------------------------------------------
+rename the group name
+==> groupmod -n new_name old_name
+example: groupmod -n sales production_team
+-----------------------------------------------------------------
+how to change the group id 
+gruopmod -g 5000 sales
+where the 5000 is the new group id
+-----------------------------------------------------------------
+how to change primary group of the user
+==>usermod -g group_name user_name
+-----------------------------------------------------------------
+how to add suplimentry group to the user
+usermod -G group_name user_name
+example: usermod -G production_team vps
+-----------------------------------------------------------------
