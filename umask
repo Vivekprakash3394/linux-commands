@@ -14,11 +14,48 @@ where	0= all permission like read write and execute
 	5= write only
 	6= execute only
 	7= no permission
-
+#########################################################################
+-------------------------------------------------------------------------
+#########################################################################
 how to change the umask
 	umask	037 
 		|||
 		||----other have no permission
 		|-----group has read only permission
 		------owner has all the permission 
+example: 
+[vps@vps linux-commands]$ touch vivek
+[vps@vps linux-commands]$ ll
+-rw-rw-r--. 1 vps vps    0 Jun  3 19:27 vivek
+
+[vps@vps linux-commands]$ umask 037
+[vps@vps linux-commands]$ touch vivek1
+
+[vps@vps linux-commands]$ ll
+-rw-rw-r--. 1 vps vps    0 Jun  3 19:27 vivek
+-rw-r-----. 1 vps vps    0 Jun  3 19:28 vivek1
+##########################################################################
+--------------------------------------------------------------------------
+##########################################################################
+we can change umask for perticular user by using .bashrcs
+and add umask 0022 at the end of the file and save the file
+Done
+
+example:
+
+[vps@vps linux-commands]$ vi /home/vps/.bashrc 
+[vps@vps linux-commands]$ touch vivek
+[vps@vps linux-commands]$ ll
+-rw-r-----. 1 vps vps    0 Jun  3 19:35 vivek
+
+##########################################################################
+--------------------------------------------------------------------------
+##########################################################################
+how to change umask for all user 
+
+1.loged in as a root
+2.open vi /etc/profile
+3.change the umask 
+4.Done
+
 
