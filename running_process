@@ -1,0 +1,42 @@
+how to check  the running process
+==>ps
+output
+----------------------------------
+root@vps linux-commands]# ps
+  PID TTY          TIME CMD
+17505 pts/1    00:00:00 su
+17512 pts/1    00:00:00 bash
+21062 pts/1    00:00:00 ps
+----------------------------------
+where	PID=process id
+	TTY=terminal type
+	TIME=running time
+	CMD= running process
+========================================================
+for more details 
+==>ps aux
+output
+----------------------------------
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.0 193824  6928 ?        Ss   17:17   0:03 /usr/lib/systemd/systemd --switched-root --system --deserialize 22
+root         2  0.0  0.0      0     0 ?        S    17:17   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        S    17:17   0:00 [ksoftirqd/0]
+root         5  0.0  0.0      0     0 ?        S<   17:17   0:00 [kworker/0:0H]
+root         7  0.0  0.0      0     0 ?        S    17:17   0:00 [migration/0]
+root         8  0.0  0.0      0     0 ?        S    17:17   0:00 [rcu_bh]
+root         9  0.1  0.0      0     0 ?        S    17:17   0:14 [rcu_sched]
+root        10  0.0  0.0      0     0 ?        S<   17:17   0:00 [lru-add-drain]
+root        11  0.0  0.0      0     0 ?        S    17:17   0:00 [watchdog/0]
+---------------------------------------------------------------------------------------
+where	USER=user information
+	PID= process id
+	%CPU=cpu utilization
+	%MEM=memory utilization
+	VSZ=how much memory available for execution
+	RSS= Resident set size(currently memory used by a process)  
+	TTY=terminal type
+	STAT= process state
+	START= time that cmd started
+	TIME= running time
+	COMMAND=running process
+
