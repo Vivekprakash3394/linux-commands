@@ -1,0 +1,14 @@
+kill commands are mainly used to kill or terminate the processes
+------------------------------
+kill signals
+==>kill -signal pid
+if we didn't give any signal then it will take default signal 
+==> kill -SIGTERM pid (default signal)
+------------------------------
+==>kill -l (list all the kill signals)
+------------------------------
+how to kill running process
+
+1.kill process_id
+2.kill %process_number/job_number
+by using anyof them we can kill running process
