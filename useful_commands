@@ -44,6 +44,7 @@ sort file_name | uniq
 cut -f1 -d: file_name	first colunm from the file separated by the : symbol(-d:)
 cut -f1,2,3 -d: file_name	it will show the column number 1, 2 and 3.
 ------------------------------------------------------------------------------
+
 ###########
 ## PASTE ##
 ###########
