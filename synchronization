@@ -1,0 +1,13 @@
+how to copy the file/Directories from server to remote machine
+1. install rsync to both machine server as well as remote
+	yum install rsync -y
+2. Now to the directory which you want to share
+	[root@servervps vivek]# ls
+	vivek
+# i want to share this file over remote machine
+
+3. type rsync -av --port=any_port_number address_of_your_file ip_address_of_remote_machine:/address_where_you_want_to_paste_the_file
+example: rsync -av --port=3212 /home/vivek 192.168.122.121:/home
+
+4. Done
+
