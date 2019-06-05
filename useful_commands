@@ -1,0 +1,52 @@
+##########
+## HEAD ##
+##########
+------------------------------------------------------------------------------
+head file_name		it shows first 10 lines from the file
+head -n5 file_name	it shows the first 5 lines from the file
+head -v file_name	it shows the first 10 lines with the file name
+------------------------------------------------------------------------------
+
+##########
+## TAIL ##
+##########
+------------------------------------------------------------------------------
+tail file_name		shows last 10 lines
+tail -n5 file_name	shows last 5 lines
+tail -f /usr/local/apache/log/errorlog		shows the current error logs
+------------------------------------------------------------------------------
+
+########
+## WC ##
+########
+------------------------------------------------------------------------------
+wc file_name		shows no of lines, words, size and file name
+wc -l file-name		display only no. of lines
+wc -w file_name		display only no. of words
+wc -c file_name		dis[play only size of the file
+------------------------------------------------------------------------------
+
+##########
+## SORT ##
+##########
+------------------------------------------------------------------------------
+sort -n file_name	sort the file which includes number
+sort file_name		sort the file based on the alphabets
+sort -u file_name	sort the file and remove the duplicate lines
+	or
+sort file_name | uniq	
+------------------------------------------------------------------------------
+
+#########
+## CUT ##
+#########
+------------------------------------------------------------------------------
+cut -f1 -d: file_name	first colunm from the file separated by the : symbol(-d:)
+cut -f1,2,3 -d: file_name	it will show the column number 1, 2 and 3.
+------------------------------------------------------------------------------
+###########
+## PASTE ##
+###########
+------------------------------------------------------------------------------
+paste -d first_file_name second_file_name > combind_file
+------------------------------------------------------------------------------
