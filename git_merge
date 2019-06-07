@@ -1,0 +1,35 @@
+clone the git repo
+git clone url
+---------------------------------------
+create branch
+git branch branch_name
+git branch test
+---------------------------------------
+switched on that branch
+git checkout branch_name
+---------------------------------------
+Do some changes in any file
+then save 
+---------------------------------------
+check status
+git status
+---------------------------------------
+now commit the check 
+git commit -a -m "branch file"
+---------------------------------------
+now merge your changes into master branch
+by using fast forword merge because it has
+diret path from master and branch
+first check the status
+git status
+then switch the master
+git checkout master
+----------------------------------------
+now check comapare the branch by using 
+git diff master..test_branch
+----------------------------------------
+now merge the branch
+git merge test
+----------------------------------------
+now push your changes into master branch
+
