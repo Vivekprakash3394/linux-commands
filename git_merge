@@ -6,7 +6,7 @@ git branch branch_name
 ==>git branch test
 ---------------------------------------
 switched on that branch
-==>git checkout branch_name
+==>git checkout test
 ---------------------------------------
 Do some changes in any file
 then save 
@@ -15,7 +15,7 @@ check status
 ==>git status
 ---------------------------------------
 now commit the check 
-==>git commit -a -m "branch file"
+==>git commit -a -m "ur msg"
 ---------------------------------------
 now merge your changes into master branch
 by using fast forword merge because it has
@@ -26,7 +26,7 @@ then switch the master
 ==>git checkout master
 ----------------------------------------
 now check comapare the branch by using 
-==>git diff master..test_branch
+==>git diff master..test
 ----------------------------------------
 now merge the branch
 ==>git merge test
