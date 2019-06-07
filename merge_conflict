@@ -16,7 +16,7 @@ How to solve merge conflict using CLI
 5. now stage and commit this with one command
 ==> git commit -a -m "change created"
 ------------------------------------------------------------------------------------------------------------------------
-6. now checkout the master and do some changes in the same file, which we were did using another branch
+6. now checkout the master and do some changes in the same file, which we were using in another branch
 ------------------------------------------------------------------------------------------------------------------------
 7. now commit the changes 
 ==> git commit -a -m "change created by master branch"
@@ -35,7 +35,7 @@ How to solve merge conflict using CLI
      here,  i have done some changes in the ps file from master as well as first_file branch
      now it is showing that there is some conflict so we need to solve this confict
 ------------------------------------------------------------------------------------------------------------------------
-10. edit that (ps) file and currect it.
+10. edit that (ps) file and remove head tags meand currect this file
 ------------------------------------------------------------------------------------------------------------------------
 11. now add this file 
 ==> git add ps
@@ -65,7 +65,7 @@ How to solve merge conflict using CLI
 	it shows the all conficts fixed but you are still merging
 ------------------------------------------------------------------------------------------------------------------------
 13. git commit
-	you can still check your confict msg here
+	you can still check your conflict msg here
 ------------------------------------------------------------------------------------------------------------------------
 14. All Done
 	now you can push your changes to master branch
