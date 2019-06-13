@@ -1,0 +1,378 @@
+##################################################################################
+----------------------------------Index-------------------------------------------
+##################################################################################
+#										 #
+# 0.  Prompt Description 							 #
+# 1.  date 									 #
+# 2.  cal 									 #
+# 3.  uptime 									 #
+# 4.  who 									 #
+# 5.  pwd									 #
+# 6.  touch									 #
+# 7.  ls									 #
+# 8.  mkdir									 #
+# 9.  copy, move, rename and delete						 #
+# 10. pinfo									 #
+# 11. cd									 #
+# 12. less									 #
+# 13. cat									 #
+# 14. redirection sign (> and >>)						 #
+# 15. standard messages (0.input, 1.output and 2.error messages)		 #
+# 16. wc 									 #
+# 17. tail									 #
+# 18. head									 #
+# 19. passwd, shadow and group information					 #
+# 20. how to use pipe(|) with commands command					 #
+# 21. su									 #
+# 22. find									 #
+# 23. vi, vim command line editor						 #
+# 24. ssh (secure shell) (remote login on the remote server)			 #
+# 25. ssh key generation							 #
+# 26. ssh key copy on the remote machine					 #
+# 27. hostname									 #
+# 28. add host name								 #
+# 29. Create Archive file							 #
+# 30. Display file of archive							 #
+# 31. Recover file from archive							 #
+# 32. Compress command using gzip						 #
+# 33. Compress command using bzip2						 #
+# 34. Compress command using xz							 #
+# 35. Directly achive and compressed the file					 #
+# 36. uncompressed 								 #
+# 37. locate command								 #
+# 38. Check user id  								 #
+# 39. ps command (for current running processes)				 #
+# 40. add local user								 #
+# 41. add password to the user							 #
+# 42. delete the user								 #
+# 43. create group								 #
+# 44. create group and give group id 						 #
+# 45. delete group								 #
+#										 #
+##################################################################################
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+----------------------------------------------------------------------------------
+[vps@servervps ~]$ 
+  |  	|      | |____this is user mode(if we loged in as root then it is #)
+  |	|      |______current_directory_path (this is home dir)
+  |	|_____________machine_name
+  |___________________user_name
+
+----------------------------------------------------------------------------------
+1. date command 
+input:	[vps@servervps ~]$ date 
+output:	Thu Jun 13 13:14:21 IST 2019
+	  |  |   |     |     |    |____Year
+	  |  |   |     |     |_________Time_Zone
+	  |  |   |     |_______________Current_Time
+          |  |   |_____________________Date
+	  |  |_________________________Month
+	  |____________________________Day
+**********************************************************************************
+[vps@servervps ~]$ date --help 
+it will shows all the other options which you can use with the date commands 
+
+----------------------------------------------------------------------------------
+2. cal command
+input:	[vps@servervps ~]$ cal
+output:	  June 2019     
+	Su Mo Tu We Th Fr Sa
+		           1
+	 2  3  4  5  6  7  8
+	 9 10 11 12 13 14 15
+	16 17 18 19 20 21 22
+	23 24 25 26 27 28 29
+	30
+----------------------------------------------------------------------------------
+3. uptime command
+inpiut:	[vps@servervps ~]$ uptime
+output:	13:20:33 up  2:20,  3 users,  load average: 0.43, 0.47, 0.52
+
+it is showing your machine running status with load average and users
+
+----------------------------------------------------------------------------------
+4. who command
+input:	[vps@servervps ~]$ who	
+ouput:	vps      :0           2019-06-13 11:00 (:0)
+	vps      pts/0        2019-06-13 11:03 (:0)
+	vps      pts/1        2019-06-13 13:08 (:0)
+	 |	   |			|______________Time Details
+	 |	   |___________________________________Terminal_Number
+	 |_____________________________________________User_Name
+
+----------------------------------------------------------------------------------
+5. pwd command (present working directory)
+input:	[vps@servervps ~]$ pwd
+output:	/home/vps
+
+----------------------------------------------------------------------------------
+6. touch command
+[vps@servervps ~]$ touch file_name
+
+==> create multiple file
+[vps@servervps ~]$ touch file_name1 file_name2 file_name3 
+	or
+[vps@servervps ~]$ touch {file_name1,file_name2,file_name3}
+
+----------------------------------------------------------------------------------
+7. ls command (list all the files and directories)
+[vps@servervps ~]$ ls
+
+try the options like 
+ls -a
+ls -l
+ls -s
+ls -R
+and there are so many, just type ls --help and try all options
+
+----------------------------------------------------------------------------------
+8. mkdir command (make directory)
+[vps@servervps ~]$ mkdir directory_name
+	or
+[vps@servervps ~]$ mkdir directory_name1 directory_name2
+
+create directory inside the created directory
+[vps@servervps ~]$ mkdir -p directory_name1/directory_name2/directory_name3
+it will make directory_name3 inside the directory_name2 and directory_name2 inside
+the directory_name1
+
+----------------------------------------------------------------------------------
+9. copy, move, rename and delete commands
+
+COPY
+[vps@servervps ~]$ cp source_address destination_address
+
+MOVE
+[vps@servervps ~]$ mv source_address destination_address
+
+RENAME
+[vps@servervps ~]$ mv old_name new_name
+
+DELETE
+[vps@servervps ~]$ rm file_name
+	or
+[vps@servervps ~]$ rm -rvf file_name
+----------------------------------------------------------------------------------
+
+10. pinfo command (open documentation of given command)
+[vps@servervps ~]$ pinfo mv
+----------------------------------------------------------------------------------
+
+11. cd command (change directory)
+[vps@servervps ~]$ cd directory_name
+----------------------------------------------------------------------------------
+
+12. less command
+[vps@servervps ~]$ less file_name
+
+open your file in read mode in new pop up screen
+----------------------------------------------------------------------------------
+
+13. cat command
+[vps@servervps ~]$ cat file_name
+
+dispaly the file contant in the terminal
+----------------------------------------------------------------------------------
+
+14. redirection sign (> and >>)
+[vps@servervps ~]$ ls > output.txt
+
+it will store the ls command output in the output.txt file
+you can check that file using cat output.txt
+
+[vps@servervps ~]$ ls >> output.txt
+it will again save ls output in the output.txt file without deleting old data
+----------------------------------------------------------------------------------
+
+15. standard messages (0.input, 1.output and 2.error messages)
+[vps@servervps ~]$ ls -y 2 >> output.txt
+
+it will store only error msg from the given command
+----------------------------------------------------------------------------------
+
+16. wc command
+[vps@servervps ~]$ wc file_name
+
+show the total line number
+----------------------------------------------------------------------------------
+
+17. tail command
+[vps@servervps ~]$ tail output.txt
+shows last 10 lines from this output.txt file
+
+[vps@servervps ~]$ tail -n 3 output.txt
+shows last three lines from this output.txt file
+----------------------------------------------------------------------------------
+
+18. head command
+[vps@servervps ~]$ head output.txt
+shows first 10 lines from this output.txt file
+
+[vps@servervps ~]$ tail -n 3 output.txt
+shows first three lines from this output.txt file
+-----------------------------------------------------------------------------------
+
+19. passwd, shadow and group information
+[vps@servervps ~]$ cat /etc/passwd
+[vps@servervps ~]$ cat /etc/shadow
+[vps@servervps ~]$ cat /etc/group
+-----------------------------------------------------------------------------------
+
+20. how to use pipe(|) with commands command
+[vps@servervps ~]$ cat /etc/passwd | less
+-----------------------------------------------------------------------------------
+
+21. su command
+[vps@servervps ~]$ su (for login as a root)
+[vps@servervps ~]$ su user_name (for login as a other user)
+-----------------------------------------------------------------------------------
+
+22. find command (to search any file)
+[vps@servervps ~]$ find path -name file_name
+	like
+[vps@servervps ~]$ find /etc/ -name passwd
+-----------------------------------------------------------------------------------
+
+23. vi, vim command line editor
+[vps@servervps ~]$ vi file_name
+	inside the vi edito
+		press i for insert mode
+		:w for write/save the written content
+		:q for quite the file
+		:wq for save and then quite the file
+-----------------------------------------------------------------------------------
+
+24. ssh (secure shell) (remote login on the remote server)
+[vps@servervps ~]$ ssh remote_user_name@remote_machine_ip
+
+-----------------------------------------------------------------------------------
+
+25. ssh key generation
+[vps@servervps ~]$ ssh-keygen
+-----------------------------------------------------------------------------------
+
+26. ssh key copy on the remote machine
+[vps@servervps ~]$ ssh-copy-id remote_machine_ip
+-----------------------------------------------------------------------------------
+
+27. host command
+[vps@servervps ~]$ hostname
+-----------------------------------------------------------------------------------
+
+28. add host name
+[vps@servervps ~]$ vi /etc/hosts
+	after open the hosts file 
+	add ip then host name
+-----------------------------------------------------------------------------------
+
+29. Create Archive file
+[vps@servervps ~]$ tar -cvf ur_file_name.tar file1 file2 file3
+
+this command will create a archive file which held file1, 2 and file 3
+-----------------------------------------------------------------------------------
+ 
+30. Display file of archive
+[vps@servervps ~]$ tar -tf ur_file_name.tar
+-----------------------------------------------------------------------------------
+
+31. Recover file from archive
+[vps@servervps ~]$ tar -xvf ur_file_name.tar
+-----------------------------------------------------------------------------------
+
+32. Compress command using (gzip,bzip2 and xz)
+Using Gzip
+[vps@servervps ~]$ gzip ur_file_name.tar
+
+Uncompressed command
+[vps@servervps ~]$ guzip ur_file_name.tar.gz
+-----------------------------------------------------------------------------------
+
+33. Using bzip2
+[vps@servervps ~]$ bzip2 ur_file_name.tar
+
+Uncompressed command
+[vps@servervps ~]$ buzip2 ur_file_name.tar.bz2
+-----------------------------------------------------------------------------------
+34. Using xz
+[vps@servervps ~]$ xz ur_file_name.tar
+
+Uncompressed command
+[vps@servervps ~]$ xz -d ur_file_name.tar.xz
+-----------------------------------------------------------------------------------
+
+35. Directly achive and compressed the file
+[vps@servervps ~]$ tar -zcvf ur_file_name.tar.gz destination_address (using gzip)
+[vps@servervps ~]$ tar -jcvf ur_file_name.tar.bz2 destination_address (using bzip2)
+[vps@servervps ~]$ tar -Jcvf ur_file_name.tar.xz destination_address (using xz)
+-----------------------------------------------------------------------------------
+
+36. uncompressed 
+[vps@servervps ~]$ tar -zxvf ur_file_name.tar.gz destination_address (using gzip)
+[vps@servervps ~]$ tar -jxvf ur_file_name.tar.bz2 destination_address (using bzip2)
+[vps@servervps ~]$ tar -Jxvf ur_file_name.tar.xz destination_address (using xz)
+-----------------------------------------------------------------------------------
+
+37. locate command
+[vps@servervps ~]$ locate file_name
+-----------------------------------------------------------------------------------
+
+38. Check user id  
+input:	[vps@servervps ~]$ id vps
+output:	uid=1000(vps) gid=1000(vps) groups=1000(vps)
+	      |		   |		     |__________group_info
+	      |		   |____________________________group_id 
+	      |_________________________________________user_id
+-----------------------------------------------------------------------------------
+
+39. ps command (for current running processes)
+[vps@servervps ~]$ ps au
+
+also check 
+ps -aux
+-----------------------------------------------------------------------------------
+
+40. add local user
+[vps@servervps ~]$ useradd user_name
+-----------------------------------------------------------------------------------
+
+41. add password to the user
+[vps@servervps ~]$ passwd user_name
+-----------------------------------------------------------------------------------
+
+42. delete the user
+[vps@servervps ~]$ userdel -r user_name
+-----------------------------------------------------------------------------------
+
+43. create group
+[vps@servervps ~]$ groupadd group_name
+-----------------------------------------------------------------------------------
+
+44. create group and give group id 
+[vps@servervps ~]$ groupadd -g 3000 group_name
+
+it will create group with group id 3000
+------------------------------------------------------------------------------------
+
+45. delete group
+[vps@servervps ~]$ groupdel group_name
+------------------------------------------------------------------------------------
+
+46. change file permission
+[vps@servervps ~]$ chmod permission file_name
+example: [vps@servervps ~]$ chmod +x test.txt
+
+permissions:
+	r (4) : read
+	w (2) : write
+	x (1) : execute
+
+[vps@servervps ~]$ chmod 421 test.txt
+		     |	 |||     |________file_name
+		     |   |||______________group_permission
+		     |   ||_______________user_permission
+		     |   |________________owner permission
+		     |____________________change file permission mode
+-------------------------------------------------------------------------------------
+
+

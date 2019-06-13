@@ -1,0 +1,39 @@
+1. alias
+The alias command lets you give your own name to a command or sequence of commands. 
+alias cls=clear
+
+2. cat
+The cat command (short for “concatenate”) lists the contents of files to the terminal window. 
+
+3. cd
+The cd command changes your current directory. In other words, it moves you to a new place in the filesystem.
+
+4. chmod
+The chmod command sets the file permissions flags on a file or folder. The flags define who can read, write to or execute the file. 
+
+5. chown
+The chown command allows you to change the owner and group owner of a file. 
+chown dave:mary example.txt
+
+6. curl
+The curl command is a tool to retrieve information and files from Uniform Resource Locators (URLs) or internet addresses.
+
+7. df
+The df command shows the size, used space, and available space on the mounted filesystems of your computer.
+df -h
+
+8. echo
+The echo command prints (echoes) a string of text to the terminal window.
+
+9. find
+Use the find command to track down files that you know exist if you can’t remember where you put them.
+find . -name *ones*
+
+10.free 
+The free command gives you a summary of the memory usage with your computer. 
+free -h
+
+11.grep
+The grep utility searches for lines which contain a search pattern. 
+grep train *.txt
+
