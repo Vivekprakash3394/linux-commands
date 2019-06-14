@@ -48,7 +48,13 @@
 # 43. create group								 #
 # 44. create group and give group id 						 #
 # 45. delete group								 #
-#										 #
+# 46. change file permission							 #
+# 47. sort									 #
+# 48. uniq  									 #
+# 49. cut									 #
+# 50. tr									 #
+# 51. paste									 #
+# 52. uname 							 		 #
 ##################################################################################
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
@@ -375,4 +381,32 @@ permissions:
 		     |____________________change file permission mode
 -------------------------------------------------------------------------------------
 
+47. sort command (used to sort the file in assending order)
+[vps@servervps ~]$ sort file_name
+-------------------------------------------------------------------------------------
+
+48. uniq command (used to display only uqin line and avoid the repeated line from the
+output)
+[vps@servervps ~]$ sort file_name | uniq
+-------------------------------------------------------------------------------------
+
+49. cut command
+[vps@servervps ~]$ cut -d":" -f1 file name
+		    |     |    |    |__________file_name
+		    |     |    |_______________colonm_number
+		    |     |____________________separeted_by :
+		    |__________________________command_name
+-------------------------------------------------------------------------------------
+
+50. Using tr on our names.txt file to turn all lower case caracters into uppper case
+[vps@servervps ~]$ tr [:lower:] [:upper:]  < file_name.txt 
+-------------------------------------------------------------------------------------
+
+51. paste command(paste first file contant into second file)
+[vps@servervps ~]$ paste file1.txt file2.txt 
+-------------------------------------------------------------------------------------
+
+52. uname command (shows alll the details about the os)
+[vps@servervps ~]$ uname -a
+-------------------------------------------------------------------------------------
 
