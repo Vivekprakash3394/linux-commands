@@ -410,3 +410,43 @@ output)
 [vps@servervps ~]$ uname -a
 -------------------------------------------------------------------------------------
 
+53. alias command (create ur shortcut of any command)
+[vps@servervps ~]$ alias c=clear
+-------------------------------------------------------------------------------------
+
+54. df command (displays the amount of disk space available on the file system)
+[vps@servervps ~]$ df -h
+-------------------------------------------------------------------------------------
+
+55. free command (gives you a summary of the memory usage with your computer.)
+[vps@servervps ~]$ free -h
+-------------------------------------------------------------------------------------
+
+56. curl command (retrieve information and files from (URLs) or internet addresses)
+[vps@servervps ~]$ curl url
+-------------------------------------------------------------------------------------
+
+57. echo command (prints (echoes) a string of text to the terminal window.)
+[vps@servervps ~]$ echo $PATH
+-------------------------------------------------------------------------------------
+
+58. awk (Aho, Weinberger and Kernighan) command (used to print given part from whole file)
+[root@servervps ~]# awk '{print $1}' file1 
+PID
+4324
+4344
+5075
+
+[root@servervps ~]# awk '{print $0}' file1 
+			  	 |_______________means print all lines
+
+
+[root@servervps ~]# awk '{print $0,$2}' file1 (print multiple line)
+				 |  |___________print column number_2
+				 |______________print column number_1
+
+
+-------------------------------------------------------------------------------------
+
+
+
