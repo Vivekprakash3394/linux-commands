@@ -452,7 +452,14 @@ PID
 				 |______________print column number_1
 
 
+[root@servervps ~]# awk '/manager/ {print}' employee.txt (Print the lines which matches with the given pattern.)
+
+[root@servervps ~]# awk '{print NR,$0}' employee.txt (print line number)
+
+[root@servervps ~]# awk '{print $1,$NF}' employee.txt (display the last field)
+
+[root@servervps ~]# awk 'NR==3, NR==6 {print NR,$0}' employee.txt (Display Line From 3 to 6)
+
+
+
 -------------------------------------------------------------------------------------
-
-
-
